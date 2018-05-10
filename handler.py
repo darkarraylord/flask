@@ -2,6 +2,7 @@ import tensorflow as tf
 import sys
 import json
 
+
 from flask import Flask
 from flask import request
 
@@ -44,4 +45,4 @@ def handler():
       return json.dumps(result)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', debug=True, port=5000)
