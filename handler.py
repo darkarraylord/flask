@@ -79,5 +79,9 @@ def flossy():
           result.append('%s:%.5f' % (human_string, score))
       return json.dumps(result)
 
+@app.route("/heartbeat")
+def heartbeat():
+  return "Heart beats ;)"
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True, port=5000)
